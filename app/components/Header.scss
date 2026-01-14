@@ -1,0 +1,135 @@
+// ==================
+// Breakpoints
+// ==================
+$mobile-max: 768px;
+
+// ==================
+// Header Layout
+// ==================
+.header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+// ==================
+// Avatar
+// ==================
+.profileWrapper {
+  margin-bottom: 24px;
+}
+
+.profile {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// ==================
+// Greeting
+// ==================
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: 'Ovo', serif;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 24px;
+
+  @media (max-width: $mobile-max) {
+    font-size: 24px;
+  }
+}
+
+.handIcon {
+  width: 32px;
+  height: 32px;
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+// ==================
+// Headline (Figma-style serif)
+// ==================
+.headlineHome {
+  font-family: 'Ovo', serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+
+  @media (max-width: $mobile-max) {
+    font-size: 36px;
+  }
+}
+
+// ==================
+// Description
+// ==================
+.descriptionHome {
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 48px;
+
+  @media (max-width: $mobile-max) {
+    font-size: 18px;
+  }
+}
+
+// ==================
+// Actions
+// ==================
+.homeButtonContainer {
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: $mobile-max) {
+    flex-direction: column;
+  }
+}
+
+// ==================
+// Buttons (Pill style like Figma)
+// ==================
+.primaryButton,
+.secondaryButton {
+  padding: 14px 36px;
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+// Primary (black)
+.primaryButton {
+  background-color: #111;
+  color: #fff;
+}
+
+// Secondary (outlined)
+.secondaryButton {
+  border: 1px solid #bbb;
+  color: #111;
+}
+
+.iconsHome{
+    width: 20px;
+    height: 20px;
+}
