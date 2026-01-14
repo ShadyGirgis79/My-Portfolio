@@ -1,0 +1,186 @@
+// ==================
+// Breakpoints
+// ==================
+$mobile-max: 768px;
+
+// ==================
+// Services Section Layout
+// ==================
+.services {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+// ==================
+// Section Headings
+// ==================
+.servicesIntro {
+  text-align: center;
+  font-family: 'Ovo', serif;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.servicesTitle {
+  text-align: center;
+  font-family: 'Ovo', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #1a1a1a;
+
+  @media (max-width: $mobile-max) {
+    font-size: 36px;
+  }
+}
+
+// ==================
+// Service Card
+// ==================
+.serviceCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 8px;
+    margin-top: 48px;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: center;
+
+    padding: 0;     // 🔥 remove browser padding
+    list-style: none; // 🔥 remove bullet spacing
+}
+
+.serviceCard {
+  background: #fff; 
+  border-radius: 20px;
+  margin: 20px;
+  padding: 40px 32px;
+  border: 1px solid #eee;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+
+  align-items: center;  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Pink hover background */
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff4fb;
+  opacity: 0;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  z-index: 0;
+}
+
+/* Hover shadow like image */
+.serviceCard::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+  width: 95%;
+  height: 95%;
+  border-radius: 20px;
+  background: #000;
+  opacity: 0;
+  filter: blur(0);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.serviceCard:hover::after {
+  opacity: 1;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+}
+
+// ==================
+// Card content layering
+// ==================
+.serviceCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+// ==================
+// Icon
+// ==================
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  //background: linear-gradient(135deg, #febbff, #ff9cc5);
+  padding: 12px;
+  border: 1.5px solid #C4F1F5;
+  border-radius: 12px;
+}
+
+// ==================
+// Title
+// ==================
+.serviceTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+// ==================
+// Description
+// ==================
+.serviceDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+// ==================
+// "Read more" link style
+// ==================
+// .serviceCard::marker {
+//   display: none;
+// }
+
+// .serviceCard::after {
+//   pointer-events: none;
+// }
+
+// /* Fake "Read more →" */
+// .serviceCard::before {
+//   pointer-events: none;
+// }
+
+// .serviceCard::before {
+//   content: "";
+// }
+
+// /* Add Read More using ::after on description */
+// .serviceDescription::after {
+//   content: "Read more  →";
+//   display: block;
+//   margin-top: 24px;
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: #1a1a1a;
+//   transition: 0.3s ease;
+// }
+
+// .serviceCard:hover .serviceDescription::after {
+//   color: #ff3b8d;
+// }
