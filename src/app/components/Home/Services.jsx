@@ -1,7 +1,8 @@
-import React from 'react'
-import styles from './Services.scss'
-import { serviceData } from './../../assets/assets'
-import Image from 'next/image'
+'use client';
+import React from 'react';
+import styles from './Services.scss';
+import { serviceData } from '../../../assets/index';
+import Image from 'next/image';
 
 const Services = () => {
   return (

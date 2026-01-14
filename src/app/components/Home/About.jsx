@@ -1,4 +1,5 @@
-import { assets, infoList, toolsData } from './../../assets/assets';
+'use client';
+import { assets, infoList, toolsData } from '../../../assets/index';
 import Image from 'next/image';
 import React from 'react';
 import './About.scss';

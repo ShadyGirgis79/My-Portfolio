@@ -143,7 +143,7 @@ export const workData = [
         description: 'UI/UX Design',
         bgImage: '/work-4.png',
     },
-]
+];
 
 export const serviceData = [
     { 
@@ -170,7 +170,7 @@ export const serviceData = [
         description: 'Designing intelligent systems that analyze data, automate processes, and make predictions using machine learning models and artificial intelligence technologies.', 
         link: '' 
     },
-]
+];
 
 export const infoList = [
     { 
@@ -196,7 +196,7 @@ export const infoList = [
         iconDark: assets.language_icon_dark, 
         title: 'Languages', 
         description: 'I speak 3 languages ' 
-    }
+    },
 ];
 
 export const toolsData = [
@@ -204,5 +204,5 @@ export const toolsData = [
     assets.firebase, 
     assets.mongodb, 
     assets.figma, 
-    assets.git
+    assets.git,
 ];

@@ -1,7 +1,8 @@
-import { assets } from './../../assets/assets'
-import Image from 'next/image'
-import './Header.scss'
-import React from 'react'
+'use client';
+import { assets } from '../../../assets/index';
+import Image from 'next/image';
+import './Header.scss';
+import React from 'react';
 
 const Header = () => {
   return (

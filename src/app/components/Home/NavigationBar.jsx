@@ -1,4 +1,5 @@
-import { assets } from './../../assets/assets';
+'use client';
+import { assets } from '../../../assets/index';
 import Image from 'next/image';
 import styles from './NavigationBar.scss';
 import React, {useRef} from 'react';

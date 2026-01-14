@@ -195,8 +195,8 @@ $tablet: 1024px;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
   margin-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
 
   @media (max-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
@@ -204,8 +204,8 @@ $tablet: 1024px;
 
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
