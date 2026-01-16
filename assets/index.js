@@ -96,54 +96,62 @@ export const assets = {
 
 export const workData = [
     {
+        id: '1',
         title: 'Frontend project',
         category: 'Web Development',
         description: 'Web Design',
         bgImage: '/work-1.png',
     },
     {
+        id: '2',
         title: 'Geo based app',
         category: 'Mobile Development',
         description: 'Mobile App',
         bgImage: '/work-2.png',
     },
     {
+        id: '3',
         title: 'Photography site',
         category: 'Web Development',
         description: 'Web Design',
         bgImage: '/work-3.png',
     },
     {
+        id: '4',
         title: 'AI & Machine Learning',
         category: 'Machine Learning',
         description: 'UI/UX Design',
         bgImage: '/work-4.png',
     },
     {
+        id: '5',
         title: 'Frontend project',
         category: 'Web Development',
         description: 'Web Design',
         bgImage: '/work-1.png',
     },
     {
+        id: '6',
         title: 'Geo based app',
         category: 'Mobile Development',
         description: 'Mobile App',
         bgImage: '/work-2.png',
     },
     {
+        id: '7',
         title: 'Photography site',
         category: 'Web Development',
         description: 'Web Design',
         bgImage: '/work-3.png',
     },
     {
+        id: '8',
         title: 'AI & Machine Learning',
         category: 'Machine Learning',
         description: 'UI/UX Design',
         bgImage: '/work-4.png',
     },
-]
+];
 
 export const serviceData = [
     { 
@@ -170,7 +178,7 @@ export const serviceData = [
         description: 'Designing intelligent systems that analyze data, automate processes, and make predictions using machine learning models and artificial intelligence technologies.', 
         link: '' 
     },
-]
+];
 
 export const infoList = [
     { 
@@ -196,7 +204,7 @@ export const infoList = [
         iconDark: assets.language_icon_dark, 
         title: 'Languages', 
         description: 'I speak 3 languages ' 
-    }
+    },
 ];
 
 export const toolsData = [
@@ -204,5 +212,5 @@ export const toolsData = [
     assets.firebase, 
     assets.mongodb, 
     assets.figma, 
-    assets.git
+    assets.git,
 ];

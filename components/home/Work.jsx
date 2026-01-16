@@ -1,4 +1,4 @@
-import { workData, assets } from './../../assets/assets';
+import { workData, assets } from './../../assets/index';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from "next/navigation";
 import Image from 'next/image';
@@ -9,39 +9,37 @@ const categories = [
   "Web Development",
   "Mobile Development",
   "Machine Learning"
-]
+];
 
-const Work = () => {
-  const [visibleCount, setVisibleCount] = useState(4)
-  const [showMore, setShowMore] = useState(true)
-  const [search, setSearch] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("All") // ⭐ NEW
+export default function Work() {
+  const [visibleCount, setVisibleCount] = useState(4);
+  const [showMore, setShowMore] = useState(true);
+  const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const router = useRouter()
+  const router = useRouter();
 
-  // 🔹 Filter by BOTH search & category
   const filteredProjects = useMemo(() => {
     return workData.filter(project => {
-      const matchesSearch = project.title.toLowerCase().includes(search.toLowerCase())
+      const matchesSearch = project.title.toLowerCase().includes(search.toLowerCase());
       const matchesCategory =
-        selectedCategory === "All" || project.category === selectedCategory
+        selectedCategory === "All" || project.category === selectedCategory;
 
-      return matchesSearch && matchesCategory
-    })
-  }, [search, selectedCategory])
+      return matchesSearch && matchesCategory;
+    });
+  }, [search, selectedCategory]);
 
-  // Projects to display (pagination)
-  const visibleProjects = filteredProjects.slice(0, visibleCount)
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   const handleShowMore = () => {
-    setVisibleCount(filteredProjects.length)
-    setShowMore(false)
-  }
+    setVisibleCount(filteredProjects.length);
+    setShowMore(false);
+  };
 
   const handleShowLess = () => {
-    setVisibleCount(4)
-    setShowMore(true)
-  }
+    setVisibleCount(4);
+    setShowMore(true);
+  };
 
   return (
     <div id="work" className="work">
@@ -49,47 +47,45 @@ const Work = () => {
       <h2 className="workTitle">My Latest Work</h2>
 
       <p className="workDescription">
-        These projects reflect my journey as a software engineer, 
+        These projects reflect my journey as a software engineer,
         spanning web and mobile development and intelligent machine learning solutions.
       </p>
 
-      {/* 🔍 Search */}
       <input
         className="workSearch"
         type="text"
         placeholder="Search projects..."
         value={search}
         onChange={(e) => {
-          setSearch(e.target.value)
-          setVisibleCount(4)
-          setShowMore(true)
+          setSearch(e.target.value);
+          setVisibleCount(4);
+          setShowMore(true);
         }}
       />
 
-      {/* 🧩 Category Buttons */}
       <div className="categoryFilters">
-        {categories.map((cat) => (
+        {categories.map((category) => (
           <button
-            key={cat}
-            className={`categoryButton ${selectedCategory === cat ? "active" : ""}`}
+            key={category}
+            className={`categoryButton ${selectedCategory === category ? "active" : ""}`}
             onClick={() => {
-              setSelectedCategory(cat)
-              setVisibleCount(4)
-              setShowMore(true)
+              setSelectedCategory(category);
+              setVisibleCount(4);
+              setShowMore(true);
             }}
           >
-            {cat}
+            {category}
           </button>
         ))}
       </div>
 
-      {/* 🖼 Projects */}
       <div className="workGrid">
         {visibleProjects.map((project, index) => (
-          <div 
+          <div
             key={index}
             className="workCard"
             style={{ backgroundImage: `url(${project.bgImage})` }}
+            onClick={() => router.push(`/projects/${project.id}`)}
           >
             <div className="workCardOverlay">
               <h3 className="workCardTitle">{project.title}</h3>
@@ -99,28 +95,28 @@ const Work = () => {
             <Image
               src={assets.send_icon}
               alt="arrow"
+              width={32}
+              height={32}
               className="workCardIcon"
+              
             />
           </div>
         ))}
       </div>
 
-      {/* ⬇ Show more / less */}
       {filteredProjects.length > 4 && (
         showMore ? (
           <button className="viewMoreButton" onClick={handleShowMore}>
             Show more
-            <Image src={assets.arrow_down} alt="down arrow" className="viewMoreIcon" />
+            <Image src={assets.arrow_down} alt="down arrow" width={16} height={16} />
           </button>
         ) : (
           <button className="viewMoreButton" onClick={handleShowLess}>
             Show less
-            <Image src={assets.arrow_up} alt="up arrow" className="viewMoreIcon" />
+            <Image src={assets.arrow_up} alt="up arrow" width={16} height={16} />
           </button>
         )
       )}
     </div>
-  )
-}
-
-export default Work
+  );
+};

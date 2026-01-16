@@ -1,9 +1,10 @@
-import { assets } from './../../assets/assets'
-import Image from 'next/image'
-import './Header.scss'
-import React from 'react'
 
-const Header = () => {
+import { assets } from './../../assets/index';
+import Image from 'next/image';
+import './Header.scss';
+import React from 'react';
+
+export default function Header() {
   return (
     <header className="header">
       {/* Avatar */}
@@ -52,5 +53,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

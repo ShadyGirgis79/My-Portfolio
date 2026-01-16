@@ -1,9 +1,10 @@
-import React from 'react'
-import styles from './Services.scss'
-import { serviceData } from './../../assets/assets'
-import Image from 'next/image'
 
-const Services = () => {
+import React from 'react';
+import styles from './Services.scss';
+import { serviceData } from './../../assets/index';
+import Image from 'next/image';
+
+export default function Services() {
   return (
     <div id="services" className="services">
       <h4 className="servicesIntro">What I offer</h4>
@@ -22,5 +23,3 @@ const Services = () => {
     </div>
   )
 }
-
-export default Services
