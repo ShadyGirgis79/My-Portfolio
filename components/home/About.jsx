@@ -1,10 +1,10 @@
-'use client';
-import { assets, infoList, toolsData } from '../../../assets/index';
+
+import { assets, infoList, toolsData } from './../../assets/index';
 import Image from 'next/image';
 import React from 'react';
 import './About.scss';
 
-const About = () => {
+export default function About() {
   return (
     <div id="about" className="about">
       <h4 className="aboutIntro">Introduction</h4>
@@ -52,4 +52,3 @@ const About = () => {
   )
 }
 
-export default About

@@ -1,10 +1,10 @@
-'use client';
-import { assets } from '../../../assets/index';
+
+import { assets } from './../../assets/index';
 import Image from 'next/image';
 import styles from './NavigationBar.scss';
 import React, {useRef} from 'react';
 
-const NavigationBar = () => {
+export default function NavigationBar() {
   const sideMenuRef = useRef();
 
   const openSideMenu = () => {
@@ -93,5 +93,3 @@ const NavigationBar = () => {
     </>
   )
 }
-
-export default NavigationBar

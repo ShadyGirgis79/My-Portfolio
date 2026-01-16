@@ -1,4 +1,4 @@
-import { workData, assets } from '../../../assets/index';
+import { workData, assets } from './../../assets/index';
 import React, { useState, useMemo } from 'react';
 import { useRouter } from "next/navigation";
 import Image from 'next/image';
@@ -11,15 +11,13 @@ const categories = [
   "Machine Learning"
 ];
 
-const Work = () => {
+export default function Work() {
   const [visibleCount, setVisibleCount] = useState(4);
   const [showMore, setShowMore] = useState(true);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const router = useRouter();
-
-  console.log("Router object:", router);
 
   const filteredProjects = useMemo(() => {
     return workData.filter(project => {
@@ -66,17 +64,17 @@ const Work = () => {
       />
 
       <div className="categoryFilters">
-        {categories.map((cat) => (
+        {categories.map((category) => (
           <button
-            key={cat}
-            className={`categoryButton ${selectedCategory === cat ? "active" : ""}`}
+            key={category}
+            className={`categoryButton ${selectedCategory === category ? "active" : ""}`}
             onClick={() => {
-              setSelectedCategory(cat);
+              setSelectedCategory(category);
               setVisibleCount(4);
               setShowMore(true);
             }}
           >
-            {cat}
+            {category}
           </button>
         ))}
       </div>
@@ -87,6 +85,7 @@ const Work = () => {
             key={index}
             className="workCard"
             style={{ backgroundImage: `url(${project.bgImage})` }}
+            onClick={() => router.push(`/projects/${project.id}`)}
           >
             <div className="workCardOverlay">
               <h3 className="workCardTitle">{project.title}</h3>
@@ -99,6 +98,7 @@ const Work = () => {
               width={32}
               height={32}
               className="workCardIcon"
+              
             />
           </div>
         ))}
@@ -120,5 +120,3 @@ const Work = () => {
     </div>
   );
 };
-
-export default Work;
