@@ -44,6 +44,11 @@ import flutter_icon from './flutter-icon.png';
 import react_icon from './react-icon.png';
 import arrow_down from './arrow-down.png';
 import arrow_up from './arrow-up.png';
+import linkedin_logo from './linkedin-logo.png';
+import github_logo from './github-logo.png';
+import whatsapp_logo from './whatsapp-logo.png';
+import email_logo from './email-logo.png';
+import cloud_download from './cloud-download-icon.png';
 
 export const assets = {
     user_image,
@@ -92,6 +97,11 @@ export const assets = {
     react_icon,
     arrow_down,
     arrow_up,
+    linkedin_logo,
+    github_logo,
+    whatsapp_logo,
+    email_logo,
+    cloud_download,
 };
 
 export const workData = [

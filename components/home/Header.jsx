@@ -5,6 +5,13 @@ import './Header.scss';
 import React from 'react';
 
 export default function Header() {
+
+  const resume = "/Shady-Emad-Resume.pdf";
+  const whatsapp = "https://wa.me/+201272517828";
+  const linkedin = "https://www.linkedin.com/in/shady-girgis-6b0602314/";
+  const github = "https://github.com/ShadyGirgis79";
+  const mail = "mailto:Shadygirgis79@email.com";
+
   return (
     <header className="header">
       {/* Avatar */}
@@ -36,18 +43,36 @@ export default function Header() {
 
       {/* Actions */}
       <div className="homeButtonContainer">
-        <a href="#contact" className="primaryButton">
-          Contact Me
-          <Image src={assets.right_arrow_white} alt="" className='iconsHome'/>
+
+        <a 
+          href={whatsapp} 
+          className="primaryButton">
+            What's App
+          <Image src={assets.whatsapp_logo} alt="" className='iconsLogo'/>
+        </a>
+
+        <a 
+          href={github} 
+          className="primaryButton">
+            Git Hub
+          <Image src={assets.github_logo} alt="" className='iconsLogo'/>
+        </a>
+
+        <a 
+          href={linkedin}
+          className="primaryButton"
+        >
+            Linked In
+          <Image src={assets.linkedin_logo} alt="" className='iconsLogo'/>
         </a>
 
         <a
-          href="/Shady-Emad-Resume.pdf"
+          href={resume}
           download
-          className="secondaryButton"
+          className="primaryButton"
         >
-          My Resume
-          <Image src={assets.download_icon} alt="" className='iconsHome'/>
+            My Resume
+          <Image src={assets.cloud_download} alt="" className='iconsLogo'/>
         </a>
       </div>
     </header>
