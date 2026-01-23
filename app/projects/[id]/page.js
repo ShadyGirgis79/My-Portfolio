@@ -1,14 +1,8 @@
-'use client';
+
 import Description from './../../../components/projects/Description';
 import { workData } from './../../../assets/index';
 
 import React from 'react';
-
-export function generateStaticParams() {
-  return workData.map(project => ({
-    id: project.id.toString(), // must be string
-  }));
-}
 
 export default function Page({ params }) {
   const { id } = React.use(params);
