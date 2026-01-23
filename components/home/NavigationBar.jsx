@@ -49,22 +49,22 @@ export default function NavigationBar() {
         {/* Right-side actions */}
         <div className="actionsContainer">
 
-          <button className="iconButton">
+          {/* <button className="iconButton">
             <Image
               src={assets.moon_icon}
               alt="dark mode"
               className="icon"
             />
-          </button>
+          </button> */}
 
-          <a href="#contact" className="connectButton">
+          {/* <a href="#contact" className="connectButton">
             Connect
             <Image
               src={assets.arrow_icon}
               alt="arrow"
               className="arrowIcon"
             />
-          </a>
+          </a> */}
 
           <button className="menuButton" onClick={openSideMenu}>
             <Image
@@ -87,7 +87,14 @@ export default function NavigationBar() {
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#services">Services</a></li>
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#work">My work</a></li>
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#contact">Contact Me</a></li>
+
+          <p className="navCopyright">
+            © 2025 Shady Emad.
+            <br /> All rights reserved.
+          </p>
         </ul>
+            
+        
 
       </nav>
     </>

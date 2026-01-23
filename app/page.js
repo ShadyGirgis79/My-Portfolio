@@ -5,6 +5,8 @@ import Header from '../components/home/Header';
 import About from '../components/home/About';
 import Services from '../components/home/Services';
 import Work from '../components/home/Work';
+import Contact from '../components/home/Contact';
+import Footer from '../components/home/Footer';
 
 const page = () => {
   return (
@@ -14,6 +16,8 @@ const page = () => {
       <About />
       <Services />
       <Work />
+      <Contact />
+      <Footer />
     </>
   )
 }
