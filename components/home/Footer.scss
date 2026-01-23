@@ -1,0 +1,104 @@
+// ==================
+// Breakpoints
+// ==================
+$mobile: 600px;
+$tablet: 1024px;
+
+// ==================
+// Footer Wrapper
+// ==================
+.footer {
+  width: 100%;
+  //padding: 60px 20px 30px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: $mobile) {
+    //padding: 40px 16px 25px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    gap: 30px;
+  }
+}
+
+/* 
+ Desktop:
+ - Large vertical padding
+ - Elements centered horizontally
+*/
+
+// ==================
+// Email Button
+// ==================
+.secondaryButton {
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  border: 1px solid #d0d0d0;
+  color: #555;
+  background-color: transparent;
+
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: #999;
+    color: #111;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    padding: 12px 22px;
+  }
+}
+
+// ==================
+// Email Icon
+// ==================
+.iconsLogo {
+  width: 30px;
+  height: 30px;
+
+  @media (max-width: $mobile) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+// ==================
+// Divider Line
+// ==================
+.footerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+
+// ==================
+// Copyright Text
+// ==================
+.footerCopyright {
+  font-size: 18px;
+  text-align: left;
+  color: #777;
+  padding-left: 20px;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
