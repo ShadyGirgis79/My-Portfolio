@@ -1,0 +1,249 @@
+// ==================
+// Breakpoints
+// ==================
+$mobile-max: 768px;
+$mobile: 600px;
+$tablet: 1024px;
+
+// ==================
+// Contact Section Layout
+// ==================
+.contact {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+// ==================
+// Section Headings
+// ==================
+.contactIntro {
+  font-family: 'Ovo', serif;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.contactTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet) {
+    font-size: 44px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 36px;
+  }
+}
+
+// ==================
+// Description
+// ==================
+.contactDescription {
+  max-width: 720px;
+  margin: 0 auto 80px;
+  font-size: 24px;
+  line-height: 1.7;
+  color: #666;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+}
+
+// ==================
+// Form Wrapper
+// ==================
+.contactForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+// ==================
+// Form Container
+// ==================
+.formContainer {
+  width: 90%;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 30px 80px rgba(0, 0, 0, 0.6);
+
+  // 👉 This makes all inputs align vertically by default
+  display: flex;
+  flex-direction: column;
+}
+
+// ==================
+// Form Header
+// ==================
+
+.formHeader {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  gap: 30;
+  margin-bottom: 30;
+
+  // 📱 On mobile, stack them vertically
+  @media (max-width: $mobile-max) {
+    flex-direction: column;
+    gap: 30,
+  }
+
+}
+
+
+// ==================
+// Shared Input Styles
+// ==================
+.formName,
+.formEmail {
+  width: 350; 
+  padding: 18px 32px;
+  font-size: 18px;
+  color: #111;
+  background: transparent;
+  border: 1px solid #7a7a7a;
+  outline: none;
+  transition: 0.3s ease;
+
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  // 📱 On mobile, stack them vertically
+  @media (max-width: $mobile-max) {
+    width: auto;
+    min-width: none;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+.formSubject,
+.formBody{
+  //width: 830; // ✅ critical for proper layout
+  padding: 18px 32px;
+  font-size: 18px;
+  color: #111;
+  background: transparent;
+  border: 1px solid #7a7a7a;
+  outline: none;
+  transition: 0.3s ease;
+
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  // 📱 On mobile, stack them vertically
+  @media (max-width: $mobile-max) {
+    //width: 250;
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}
+
+// Rounded pill inputs
+.formName,
+.formEmail,
+.formSubject {
+  border-radius: 999px;
+}
+
+// ==================
+// Subject
+// ==================
+.formSubject {
+  margin-bottom: 32px; // 👉 clear separation from textarea
+}
+
+// ==================
+// Message Textarea
+// ==================
+.formBody {
+  min-height: 160px; // 👉 better height control than rows
+  border-radius: 40px; // 👉 softer curve like the image
+  resize: none;
+  margin-bottom: 36px;
+
+  @media (max-width: $mobile) {
+    border-radius: 28px;
+  }
+}
+
+// ==================
+// Placeholder + Focus States
+// ==================
+.formName::placeholder,
+.formEmail::placeholder,
+.formSubject::placeholder,
+.formBody::placeholder {
+  color: #666;
+}
+
+.formName:focus,
+.formEmail:focus,
+.formSubject:focus,
+.formBody:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+
+// ==================
+// Submit Button
+// ==================
+.formButton {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 1px solid #787878;
+  font-size: 18px;
+  color: #111;
+  background-color: transparent;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-bottom: 20;
+
+  &:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+.formSubmission {
+  font-size: 18px;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+// ==================
+// Button Icon
+// ==================
+.formIcon {
+  width: 22px;
+  height: 22px;
+}
