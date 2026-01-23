@@ -49,13 +49,13 @@ export default function NavigationBar() {
         {/* Right-side actions */}
         <div className="actionsContainer">
 
-          <button className="iconButton">
+          {/* <button className="iconButton">
             <Image
               src={assets.moon_icon}
               alt="dark mode"
               className="icon"
             />
-          </button>
+          </button> */}
 
           {/* <a href="#contact" className="connectButton">
             Connect
