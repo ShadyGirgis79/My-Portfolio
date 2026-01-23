@@ -3,6 +3,7 @@ import { assets } from './../../assets/index';
 import Image from 'next/image';
 import './Header.scss';
 import React from 'react';
+import { motion } from "motion/react";
 
 export default function Header() {
 
@@ -15,65 +16,93 @@ export default function Header() {
   return (
     <header className="header">
       {/* Avatar */}
-      <div className="profileWrapper">
+      <motion.div 
+        initial={{scale: 0}}
+        whileInView={{scale: 1}}
+        transition={ {duration: 0.8, type: 'spring', stiffness: 100}}
+        className="profileWrapper">
         <Image
           src={assets.profile_img}
           alt="Profile"
           className="profile"
         />
-      </div>
+      </motion.div>
 
       {/* Greeting */}
-      <h3 className="greeting">
+      <motion.h3 
+        initial={{y: -20, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        transition={ {duration: 0.6, delay: 0.3}}
+        className="greeting">
         Hi! I’m Shady Emad
         <Image src={assets.hand_icon} alt="Hand" className="handIcon" />
-      </h3>
+      </motion.h3>
 
       {/* Main headline */}
-      <h1 className="headlineHome">
+      <motion.h1 
+        initial={{y: -30, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        transition={ {duration: 0.8, delay: 0.5}}
+        className="headlineHome">
         Frontend Web & Mobile Developer based in Egypt
-      </h1>
+      </motion.h1>
 
       {/* Description */}
-      <p className="descriptionHome">
+      <motion.p 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 0.6, delay: 0.7}}
+        className="descriptionHome">
         I am a passionate developer specializing in building modern, responsive
         applications with a strong academic background in Data Science and
         real-world experience applying AI and machine learning concepts.
-      </p>
+      </motion.p>
 
       {/* Actions */}
       <div className="homeButtonContainer">
 
-        <a 
+        <motion.a
+          initial={{y: 30, opacity: 0}}
+          whileInView={{y: 0, opacity: 1}}
+          transition={ {duration: 0.6, delay: 1}} 
           href={whatsapp} 
           className="primaryButton">
             What's App
           <Image src={assets.whatsapp_logo} alt="" className='iconsLogo'/>
-        </a>
+        </motion.a>
 
-        <a 
+        <motion.a
+          initial={{y: 30, opacity: 0}}
+          whileInView={{y: 0, opacity: 1}}
+          transition={ {duration: 0.6, delay: 1}} 
           href={github} 
           className="primaryButton">
             Git Hub
           <Image src={assets.github_logo} alt="" className='iconsLogo'/>
-        </a>
+        </motion.a>
 
-        <a 
+        <motion.a 
+          initial={{y: 30, opacity: 0}}
+          whileInView={{y: 0, opacity: 1}}
+          transition={ {duration: 0.6, delay: 1}} 
           href={linkedin}
           className="primaryButton"
         >
             Linked In
           <Image src={assets.linkedin_logo} alt="" className='iconsLogo'/>
-        </a>
+        </motion.a>
 
-        <a
+        <motion.a
+          initial={{y: 30, opacity: 0}}
+          whileInView={{y: 0, opacity: 1}}
+          transition={ {duration: 0.6, delay: 1}} 
           href={resume}
           download
           className="primaryButton"
         >
             My Resume
           <Image src={assets.cloud_download} alt="" className='iconsLogo'/>
-        </a>
+        </motion.a>
       </div>
     </header>
   )
