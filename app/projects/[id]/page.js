@@ -17,8 +17,8 @@ export default function Page({ params }) {
   };
 
   return (
-    <div>
+    <>
       <Description project={project} />
-    </div>
+    </>
   );
 }

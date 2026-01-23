@@ -243,3 +243,17 @@ $mobile: 768px;       // Alternate mobile breakpoint reference
   }
 }
 
+
+// ==================
+// Copyright Text
+// ==================
+.navCopyright {
+  font-size: 18px;
+  text-align: left;
+  color: #777;
+  padding-top: 300%;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
