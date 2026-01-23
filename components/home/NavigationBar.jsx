@@ -57,14 +57,14 @@ export default function NavigationBar() {
             />
           </button>
 
-          <a href="#contact" className="connectButton">
+          {/* <a href="#contact" className="connectButton">
             Connect
             <Image
               src={assets.arrow_icon}
               alt="arrow"
               className="arrowIcon"
             />
-          </a>
+          </a> */}
 
           <button className="menuButton" onClick={openSideMenu}>
             <Image
