@@ -1,5 +1,6 @@
 
 import React , {useState} from 'react';
+import { motion } from "motion/react";
 import styles from './Contact.scss';
 import Image from 'next/image';
 import { assets } from './../../assets/index';
@@ -37,61 +38,81 @@ export default function Contact() {
 
   return (
     <div id="contact" className="contact">
-      <h4 className="contactIntro">Get in touch</h4>
-      <h2 className="contactTitle">Contact Me</h2>
+        <motion.h4 
+            initial={{y: -20, opacity: 0}}
+            whileInView={{y: 0, opacity: 1}}
+            transition={ {duration: 0.6, delay: 0.3}}
+            className="contactIntro">
+            Get in touch
+        </motion.h4>
+        <motion.h2 
+            initial={{y: -20, opacity: 0}}
+            whileInView={{y: 0, opacity: 1}}
+            transition={ {duration: 0.6, delay: 0.8}}
+            className="contactTitle">
+            Contact Me
+        </motion.h2>
 
-      <p className="contactDescription">
-        I'd love to hear from you! If you have any questions, comments or feedback, 
-        please use the form below.
-      </p>  
+        <motion.p 
+            initial={{y: -30, opacity: 0}}
+            whileInView={{y: 0, opacity: 1}}
+            transition={ {duration: 0.3, delay: 0.8}} 
+            className="contactDescription">
+            I'd love to hear from you! If you have any questions, comments or feedback, 
+            please use the form below.
+        </motion.p>  
 
-      <form className='contactForm' onSubmit={onSubmit}>
-        <div className='formContainer'>
-            <div className='formHeader'>
+        <motion.form 
+            initial={{scale: 0}}
+            whileInView={{scale: 1}}
+            whileHover={{scale: 1.05}}
+            transition={ {duration: 0.8, type: 'spring', stiffness: 100}}
+            className='contactForm' onSubmit={onSubmit}>
+            <div className='formContainer'>
+                <div className='formHeader'>
+                    <input 
+                        type="text" 
+                        placeholder='Name' 
+                        required
+                        className='formName'
+                        name='name'
+                    />
+                    <input 
+                        type="email" 
+                        placeholder='Email' 
+                        required
+                        className='formEmail'
+                        name='email'
+                    />
+
+                </div>
                 <input 
                     type="text" 
-                    placeholder='Name' 
-                    required
-                    className='formName'
-                    name='name'
+                    placeholder='Subject' 
+                    className='formSubject'
+                    name='subject'
                 />
-                <input 
-                    type="email" 
-                    placeholder='Email' 
+                <textarea 
+                    rows={6}
+                    placeholder='Your message'
                     required
-                    className='formEmail'
-                    name='email'
-                />
+                    className='formBody'
+                    name='message'
+                >
 
+                </textarea>
+                <button
+                    type='submit'
+                    className='formButton'
+                >
+                    Submit Now 
+                    <Image src={assets.right_arrow_white} alt='' className='formIcon' />
+                </button>
+
+                <p className='formSubmission'>{result}</p>
             </div>
-            <input 
-                type="text" 
-                placeholder='Subject' 
-                className='formSubject'
-                name='subject'
-            />
-            <textarea 
-                rows={6}
-                placeholder='Your message'
-                required
-                className='formBody'
-                name='message'
-            >
-
-            </textarea>
-            <button
-                type='submit'
-                className='formButton'
-            >
-                Submit Now 
-                <Image src={assets.right_arrow_white} alt='' className='formIcon' />
-            </button>
-
-            <p className='formSubmission'>{result}</p>
-        </div>
-      </form>
+        </motion.form>
       
-
     </div>
   )
 }

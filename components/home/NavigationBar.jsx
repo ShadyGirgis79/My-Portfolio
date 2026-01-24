@@ -89,7 +89,7 @@ export default function NavigationBar() {
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#contact">Contact Me</a></li>
 
           <p className="navCopyright">
-            © 2025 Shady Emad.
+            © 2026 Shady Emad.
             <br /> All rights reserved.
           </p>
         </ul>
