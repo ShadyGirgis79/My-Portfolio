@@ -50,7 +50,7 @@ export default function About() {
             whileInView={{y: 0, opacity: 1}}
             transition={ {duration: 0.6, delay: 1}}
             className="aboutCards">
-            {infoList.map(({ icon, title, description }, index) => (
+            {infoList.map(({ icon, title, firstDescription, secondDescription }, index) => (
               <motion.li 
                 initial={{scale: 0}}
                 whileInView={{scale: 1}}
@@ -59,7 +59,8 @@ export default function About() {
                 key={index} className="aboutCard">
                 <Image src={icon} alt="icon" />
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <p>{firstDescription}</p>
+                <p>{secondDescription}</p>
               </motion.li>
             ))}
           </motion.ul>

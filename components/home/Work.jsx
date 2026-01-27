@@ -9,7 +9,7 @@ const categories = [
   "All",
   "Web Development",
   "Mobile Development",
-  "Machine Learning"
+  "AI & Machine Learning"
 ];
 
 export default function Work() {
