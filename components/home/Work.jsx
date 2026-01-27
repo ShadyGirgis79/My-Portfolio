@@ -105,11 +105,14 @@ export default function Work() {
           <div className="workGrid">
             {visibleProjects.map((project, index) => (
               <div
-                key={index}
+                key={project.id}
                 className="workCard"
-                style={{ backgroundImage: `url(${project.bgImage})` }}
                 onClick={() => router.push(`/projects/${project.id}`)}
+                style={{
+                  backgroundImage: `url(${project.bgImage.src})`,
+                }}
               >
+                <Image src={project.bgImage} alt="background image" className="workCard" />
                 <div className="workCardOverlay">
                   <h3 className="workCardTitle">{project.title}</h3>
                   <p className="workCardDescription">{project.category}</p>

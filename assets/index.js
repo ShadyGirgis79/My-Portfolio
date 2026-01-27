@@ -1,4 +1,4 @@
-import user_image from './images/user-image.jpeg';
+
 import code_icon from './icons/code-icon.png';
 import code_icon_dark from './icons/code-icon-dark.png';
 import edu_icon from './icons/edu-icon.png';
@@ -15,10 +15,8 @@ import mongodb from './icons/mongodb.png';
 import right_arrow_white from './icons/right-arrow-white.png';
 import mail_icon from './icons/mail_icon.png';
 import mail_icon_dark from './icons/mail_icon_dark.png';
-import profile_img from './images/profile-img.png';
 import download_icon from './icons/download-icon.png';
 import hand_icon from './icons/hand-icon.png';
-import header_bg_color from './images/header-bg-color.png';
 import moon_icon from './icons/moon_icon.png';
 import sun_icon from './icons/sun_icon.png';
 import arrow_icon from './icons/arrow-icon.png';
@@ -35,7 +33,6 @@ import right_arrow from './icons/right-arrow.png';
 import send_icon from './icons/send-icon.png';
 import right_arrow_bold from './icons/right-arrow-bold.png';
 import right_arrow_bold_dark from './icons/right-arrow-bold-dark.png';
-import mobile_background from './images/mobile-background.png';
 import web_dev_icon from './icons/web-dev-icon.png';
 import ai_icon from './icons/ai-icon.png';
 import flutter_icon from './icons/flutter-icon.png';
@@ -48,8 +45,15 @@ import whatsapp_logo from './icons/whatsapp-logo.png';
 import email_logo from './icons/email-logo.png';
 import cloud_download from './icons/cloud-download-icon.png';
 
-export const assets = {
-    user_image,
+import user_image from './images/user-image.jpeg';
+import profile_img from './images/profile-img.png';
+import mobile_background from './images/mobile-background.png';
+import header_bg_color from './images/header-bg-color.png';
+import nesba_logo from './images/nesbaLogo.png';
+
+
+
+export const assets = { 
     code_icon,
     code_icon_dark,
     edu_icon,
@@ -64,10 +68,8 @@ export const assets = {
     right_arrow_white,
     mail_icon,
     mail_icon_dark,
-    profile_img,
     download_icon,
     hand_icon,
-    header_bg_color,
     moon_icon,
     sun_icon,
     arrow_icon,
@@ -86,7 +88,6 @@ export const assets = {
     right_arrow_bold_dark,
     language_icon_dark,
     language_icon_light,
-    mobile_background,
     web_dev_icon,
     ai_icon,
     flutter_icon,
@@ -98,6 +99,12 @@ export const assets = {
     whatsapp_logo,
     email_logo,
     cloud_download,
+
+    user_image,
+    profile_img,
+    mobile_background,
+    header_bg_color,
+    nesba_logo,
 };
 
 export const workData = [
@@ -107,15 +114,15 @@ export const workData = [
         category: 'Web Development',
         description: 'Web Development',
         coverImage: '',
-        bgImage: '/work-1.png',
+        bgImage: assets.nesba_logo,
     },
     {
         id: 2,
-        title: 'Geo based app',
+        title: 'Nesba Investment',
         category: 'Mobile Development',
         description: 'Mobile Development',
         coverImage: '',
-        bgImage: '/work-2.png',
+        bgImage: assets.nesba_logo,
     },
     {
         id: 3,
@@ -123,7 +130,7 @@ export const workData = [
         category: 'AI & Machine Learning',
         description: 'AI & Machine Learning',
         coverImage: '',
-        bgImage: '/work-4.png',
+        bgImage: assets.nesba_logo,
     },
 
 ];
