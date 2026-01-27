@@ -102,61 +102,30 @@ export const assets = {
 
 export const workData = [
     {
-        id: '1',
+        id: 1,
         title: 'Frontend project',
         category: 'Web Development',
-        description: 'Web Design',
+        description: 'Web Development',
+        coverImage: '',
         bgImage: '/work-1.png',
     },
     {
-        id: '2',
+        id: 2,
         title: 'Geo based app',
         category: 'Mobile Development',
-        description: 'Mobile App',
+        description: 'Mobile Development',
+        coverImage: '',
         bgImage: '/work-2.png',
     },
     {
-        id: '3',
-        title: 'Photography site',
-        category: 'Web Development',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        id: '4',
+        id: 3,
         title: 'AI & Machine Learning',
-        category: 'Machine Learning',
-        description: 'UI/UX Design',
+        category: 'AI & Machine Learning',
+        description: 'AI & Machine Learning',
+        coverImage: '',
         bgImage: '/work-4.png',
     },
-    {
-        id: '5',
-        title: 'Frontend project',
-        category: 'Web Development',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-    },
-    {
-        id: '6',
-        title: 'Geo based app',
-        category: 'Mobile Development',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-    },
-    {
-        id: '7',
-        title: 'Photography site',
-        category: 'Web Development',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        id: '8',
-        title: 'AI & Machine Learning',
-        category: 'Machine Learning',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
+
 ];
 
 export const serviceData = [
@@ -190,26 +159,30 @@ export const infoList = [
     { 
         icon: assets.code_icon, 
         iconDark: assets.code_icon_dark, 
-        title: 'Languages', 
-        description: 'HTML, CSS, JavaScript React Js, Next Js' 
+        title: 'Programming Languages', 
+        firstDescription: 'HTML, CSS, JavaScript, React Js, Next Js, Python, Java, C/C++' ,
+        secondDescription: 'React-Native, Flutter, Dart'
     },
     { 
         icon: assets.edu_icon, 
         iconDark: assets.edu_icon_dark, 
         title: 'Education', 
-        description: 'B.Tech in Computer Science' 
+        firstDescription: 'Bachelor in Computer Software Engineering from University of East London' ,
+        secondDescription: 'Bachelor in Computer Software Engineering from Ain Shams University'
     },
     { 
         icon: assets.project_icon, 
         iconDark: assets.project_icon_dark, 
         title: 'Projects', 
-        description: 'Built more than 5 projects' 
+        firstDescription: 'Built 3 live applications' ,
+        secondDescription: 'Worked on more than 20 projects for my college'
     },
     { 
         icon: assets.language_icon_light, 
         iconDark: assets.language_icon_dark, 
         title: 'Languages', 
-        description: 'I speak 3 languages ' 
+        firstDescription: 'I speak 3 languages ' ,
+        secondDescription: 'English, German, Arabic'
     },
 ];
 

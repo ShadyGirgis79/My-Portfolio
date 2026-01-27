@@ -44,7 +44,8 @@ export default function Header() {
         whileInView={{y: 0, opacity: 1}}
         transition={ {duration: 0.8, delay: 0.5}}
         className="headlineHome">
-        Frontend Web & Mobile Developer based in Egypt
+        Frontend Web & Mobile Developer 
+        <br />based in Egypt
       </motion.h1>
 
       {/* Description */}

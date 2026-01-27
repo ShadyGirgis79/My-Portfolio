@@ -39,13 +39,10 @@ $mobile: 768px;       // Alternate mobile breakpoint reference
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  width: 100%;
   background-color: blur(20px)white;
-
   max-width: 1800px;
   margin: 20px auto;
-  padding: 40px 24px;
+  padding: 40px 0px;
   display: flex;
   align-items: center;
 
@@ -78,7 +75,6 @@ $mobile: 768px;       // Alternate mobile breakpoint reference
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
   position: absolute;          // 🔥 removed from flex flow
   left: 50%;
   transform: translateX(-50%); // 🔥 true screen centering
@@ -209,8 +205,8 @@ $mobile: 768px;       // Alternate mobile breakpoint reference
 
 .closeButton {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 30px;
 }
 
 .closeIcon {
