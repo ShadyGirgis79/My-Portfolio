@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export default function Page({ params }) {
   const { id } = React.use(params);
 
-  const project = workData.find(p => p.id === id);
+  const project = workData.find(p => p.id == id);
 
   console.log("URL param:", id);
   console.log("Project:", project);

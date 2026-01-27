@@ -130,9 +130,9 @@ export const workData = [
 
 export const serviceData = [
     { 
-        icon: assets.web_dev_icon, 
-        title: 'Web Development', 
-        description: 'Building fast, responsive, and scalable websites and web applications using modern technologies like HTML, CSS, JavaScript, and frameworks such as React and Next.js.', 
+        icon: assets.react_icon, 
+        title: 'React-Native Mobile Development', 
+        description: 'Developing powerful mobile apps using React Native (CLI & Expo), delivering native performance and beautiful interfaces for both iOS and Android platforms.', 
         link: '' 
     },
     { 
@@ -142,11 +142,11 @@ export const serviceData = [
         link: '' 
     },
     { 
-        icon: assets.react_icon, 
-        title: 'React-Native Mobile Development', 
-        description: 'Developing powerful mobile apps using React Native, delivering native performance and beautiful interfaces for both iOS and Android platforms.', 
+        icon: assets.web_dev_icon, 
+        title: 'Web Development', 
+        description: 'Building fast, responsive, and scalable websites and web applications using modern technologies like HTML, CSS, JavaScript, TypeScript and frameworks such as React , Next.js and Node.js.', 
         link: '' 
-    },
+    },  
     { 
         icon: assets.ai_icon, 
         title: 'AI & Machine Learning', 
@@ -157,13 +157,6 @@ export const serviceData = [
 
 export const infoList = [
     { 
-        icon: assets.code_icon, 
-        iconDark: assets.code_icon_dark, 
-        title: 'Programming Languages', 
-        firstDescription: 'HTML, CSS, JavaScript, React Js, Next Js, Python, Java, C/C++' ,
-        secondDescription: 'React-Native, Flutter, Dart'
-    },
-    { 
         icon: assets.edu_icon, 
         iconDark: assets.edu_icon_dark, 
         title: 'Education', 
@@ -171,18 +164,25 @@ export const infoList = [
         secondDescription: 'Bachelor in Computer Software Engineering from Ain Shams University'
     },
     { 
-        icon: assets.project_icon, 
-        iconDark: assets.project_icon_dark, 
-        title: 'Projects', 
-        firstDescription: 'Built 3 live applications' ,
-        secondDescription: 'Worked on more than 20 projects for my college'
-    },
-    { 
         icon: assets.language_icon_light, 
         iconDark: assets.language_icon_dark, 
         title: 'Languages', 
         firstDescription: 'I speak 3 languages ' ,
         secondDescription: 'English, German, Arabic'
+    },
+    { 
+        icon: assets.code_icon, 
+        iconDark: assets.code_icon_dark, 
+        title: 'Programming Skills', 
+        firstDescription: 'Languages: HTML, CSS, JavaScript, TypeScript, Dart, Python, Java, C/C++' ,
+        secondDescription: 'Frameworks: React-Native, Flutter, React Js, Next Js, Node Js'
+    },
+    { 
+        icon: assets.project_icon, 
+        iconDark: assets.project_icon_dark, 
+        title: 'Projects', 
+        firstDescription: 'Built 3 live applications' ,
+        secondDescription: 'Worked on more than 20 projects for my college'
     },
 ];
 
