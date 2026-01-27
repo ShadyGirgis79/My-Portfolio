@@ -2,17 +2,40 @@
 import { assets } from './../../assets/index';
 import Image from 'next/image';
 import styles from './NavigationBar.scss';
-import React, {useRef} from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 export default function NavigationBar() {
-  const sideMenuRef = useRef();
+  const sideMenuRef = useRef(null);
+  const menuButtonRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openSideMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-300px)";
-  }
+    setIsOpen(true);
+  };
   const closeSideMenu = () => {
     sideMenuRef.current.style.transform = "translateX(300px)";
-  } 
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isOpen &&
+        sideMenuRef.current &&
+        !sideMenuRef.current.contains(event.target) &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        closeSideMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -66,7 +89,7 @@ export default function NavigationBar() {
             />
           </a> */}
 
-          <button className="menuButton" onClick={openSideMenu}>
+          <button ref={menuButtonRef} className="menuButton" onClick={openSideMenu}>
             <Image
               src={assets.menu_black}
               alt="menu button"
