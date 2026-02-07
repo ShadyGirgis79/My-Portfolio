@@ -24,7 +24,7 @@ export default function Work() {
     return workData.filter(project => {
       const matchesSearch = project.title.toLowerCase().includes(search.toLowerCase());
       const matchesCategory =
-        selectedCategory === "All" || project.category === selectedCategory;
+        selectedCategory === "All" || project.category.toLowerCase().includes(selectedCategory.toLowerCase()) ;
 
       return matchesSearch && matchesCategory;
     });
@@ -109,10 +109,10 @@ export default function Work() {
                 className="workCard"
                 onClick={() => router.push(`/projects/${project.id}`)}
                 style={{
-                  backgroundImage: `url(${project.bgImage.src})`,
+                  backgroundImage: `url(${project.coverImage.src})`,
                 }}
               >
-                <Image src={project.bgImage} alt="background image" className="workCard" />
+      
                 <div className="workCardOverlay">
                   <h3 className="workCardTitle">{project.title}</h3>
                   <p className="workCardDescription">{project.category}</p>

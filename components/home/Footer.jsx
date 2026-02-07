@@ -16,7 +16,7 @@ export default function Footer() {
                 href={mail}
                 className="secondaryButton"
             >
-                <Image src={assets.email_logo} alt="" className='iconsLogo'/>
+                <Image src={assets.email_logo} alt="email logo" className='iconsLogo'/>
                 shadygirgis79@gmail.com
             </motion.a>
 
