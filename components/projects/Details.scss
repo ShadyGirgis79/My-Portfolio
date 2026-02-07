@@ -1,0 +1,186 @@
+$mobile-max: 768px;   // Max width for mobile breakpoint
+$desktop-min: 769px;  // Min width for desktop breakpoint
+$mobile: 768px;       // Alternate mobile breakpoint reference
+
+.detailsWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ======================
+   Cover Image
+====================== */
+.coverWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.projectCoverImage {
+  width: 200px;
+  max-width: 420px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* ======================
+   Title & Description
+====================== */
+.projectTitle {
+  font-size: 32px;
+  margin-bottom: 16px;
+
+  @media (max-width: $mobile) {
+    font-size: 24px;
+  }
+}
+
+.projectDescription {
+  max-width: 800px;
+  margin: 0 auto 32px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+/* ======================
+   Buttons
+====================== */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.primaryButton {
+  padding: 14px 30px;
+  border-radius: 999px;
+  min-width: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+}
+
+// ==================
+// Email Button
+// ==================
+.secondaryButton {
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  border: 1px solid #d0d0d0;
+  color: #555;
+  background-color: transparent;
+
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: #999;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    padding: 12px 22px;
+  }
+}
+
+
+/* ======================
+   Images Horizontal Scroll
+====================== */
+.imagesScroller {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  align-items: center;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.imageCard {
+  min-width: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* ======================
+   Video
+====================== */
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 16px;
+
+    @media (max-width: $mobile) {
+      height: 220px;
+    }
+  }
+}
+
+/* ======================
+   Icons
+====================== */
+.iconsLogo {
+  width: 30px;
+  height: 30px;
+
+  @media (max-width: $mobile) {
+    width: 20px;
+    height: 20px;
+  }
+}

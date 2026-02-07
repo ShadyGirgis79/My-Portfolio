@@ -65,12 +65,20 @@ export default function NavigationBar() {
           <li className="tab"><a className="font-Ovo" href="#top">Home</a></li>
           <li className="tab"><a className="font-Ovo" href="#about">About me</a></li>
           <li className="tab"><a className="font-Ovo" href="#services">Services</a></li>
-          <li className="tab"><a className="font-Ovo" href="#work">My work</a></li>
+          <li className="tab"><a className="font-Ovo" href="#work">My Work</a></li>
           <li className="tab"><a className="font-Ovo" href="#contact">Contact Me</a></li>
         </ul>
 
         {/* Right-side actions */}
         <div className="actionsContainer">
+
+          <button ref={menuButtonRef} className="menuButton" onClick={openSideMenu}>
+            <Image
+              src={assets.menu_black}
+              alt="menu button"
+              className="icon"
+            />
+          </button>
 
           {/* <button className="iconButton">
             <Image
@@ -89,13 +97,6 @@ export default function NavigationBar() {
             />
           </a> */}
 
-          <button ref={menuButtonRef} className="menuButton" onClick={openSideMenu}>
-            <Image
-              src={assets.menu_black}
-              alt="menu button"
-              className="icon"
-            />
-          </button>
 
         </div>
 
@@ -108,7 +109,7 @@ export default function NavigationBar() {
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#top">Home</a></li>
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#about">About me</a></li>
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#services">Services</a></li>
-          <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#work">My work</a></li>
+          <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#work">My Work</a></li>
           <li className="sideTab"><a className="font-Ovo" onClick={closeSideMenu} href="#contact">Contact Me</a></li>
 
           <p className="navCopyright">

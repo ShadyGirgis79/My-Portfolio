@@ -1,8 +1,9 @@
 
-import Description from './../../../components/projects/Description';
 import { workData } from './../../../assets/index';
 
 import React from 'react';
+import Details from './../../../components/projects/Details';
+import Background from './../../../components/projects/Background';
 
 export function generateStaticParams() {
   return workData.map(project => ({
@@ -24,7 +25,8 @@ export default function Page({ params }) {
 
   return (
     <>
-      <Description project={project} />
+      <Background />
+      <Details project={project} />
     </>
   );
 }
