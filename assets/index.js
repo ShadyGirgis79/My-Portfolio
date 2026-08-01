@@ -82,12 +82,20 @@ import hediety_8 from './images/Hediety-8.jpg';
 import hediety_9 from './images/Hediety-9.png';
 import hediety_logo from './images/hedietyLogo.png';
 
+import YourTours1 from './images/YourTours1.jpg';
+import YourTours2 from './images/YourTours2.jpg';
+import YourTours3 from './images/YourTours3.jpg';
+import YourTours4 from './images/YourTours4.jpg';
+import YourTours5 from './images/YourTours5.jpg';
+import YourTours6 from './images/YourTours6.jpg';
+import your_tours_logo from './images/yourToursLogo.png';
+
 import user_image from './images/user-image.jpeg';
 import profile_img from './images/profile-img.png';
 import mobile_background from './images/mobile-background.png';
 import header_bg_color from './images/header-bg-color.png';
 import nesba_logo from './images/nesbaLogo.png';
-import your_tours_logo from './images/yourToursLogo.png';
+
 import sudoku_logo from './images/Sudoku.png';
 
 
@@ -174,6 +182,14 @@ export const assets = {
     covid_3,
     covid_logo,
 
+    YourTours1,
+    YourTours2,
+    YourTours3,
+    YourTours4,
+    YourTours5,
+    YourTours6,
+    your_tours_logo,
+
     movies_logo,
     movies_screen,
     sudoku_logo,
@@ -183,8 +199,6 @@ export const assets = {
     mobile_background,
     header_bg_color,
     nesba_logo,
-    your_tours_logo,
-    
 };
 
 export const workData = [
@@ -212,9 +226,15 @@ export const workData = [
         coverImage: assets.your_tours_logo,
         githubLink: null,
         webLink: null,
-        installAndroid: null, 
-        installIOS: null, 
-        images: [],
+        installAndroid: "https://play.google.com/store/apps/details?id=com.travelwaysmobile", 
+        installIOS: "https://apps.apple.com/eg/app/your-tours/id6754837553", 
+        images: [
+            assets.YourTours1, 
+            assets.YourTours2, 
+            assets.YourTours3, 
+            assets.YourTours4, 
+            assets.YourTours5, 
+            assets.YourTours6],
         video: null,
     },
     {
