@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 export default function Header() {
 
-  const resume = "/Shady-Emad-Resume.pdf";
+  const resume = "Shady-Emad-Resume.pdf";
   const whatsapp = "https://wa.me/+201272517828";
   const linkedin = "https://www.linkedin.com/in/shady-girgis-6b0602314/";
   const github = "https://github.com/ShadyGirgis79";
